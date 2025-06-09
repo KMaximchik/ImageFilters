@@ -39,11 +39,9 @@ final class HomeViewController: UIViewController {
         UIView()
     }()
 
-    private lazy var imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+    private lazy var imageView: IFResizableImageView = {
+        let imageView = IFResizableImageView()
         imageView.layer.cornerRadius = 24
-        imageView.clipsToBounds = true
 
         return imageView
     }()
