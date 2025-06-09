@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - BaseCoordinator
 
-class BaseCoordinator: CoordinatorProtocol {
+class BaseCoordinator: NSObject, CoordinatorProtocol {
     // MARK: - Internal Properties
 
     var navigationController: UINavigationController?

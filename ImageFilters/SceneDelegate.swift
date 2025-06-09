@@ -11,6 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private var coordinator: CoordinatorProtocol?
     private var assembly: BaseAssembly?
+    private let servicesAssembly: ServicesAssemblyInterface = ServicesAssembly()
 
     // MARK: - *UIWindowSceneDelegate
 
@@ -43,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let window else { return }
 
-        let assembly = HomeAssembly()
+        let assembly = HomeAssembly(servicesAssembly: servicesAssembly)
         coordinator = assembly.coordinator()
 
         guard let coordinator else { return }
